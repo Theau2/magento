@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Razorfish_CronScheduler::title"
+             title="Cron Scheduler"
+             module="Razorfish_CronScheduler"
+             sortOrder="51"
+             resource="Razorfish_CronScheduler::jobs"/>
+        <add id="Razorfish_CronScheduler::jobs"
+             title="Cron List"
+             module="Razorfish_CronScheduler"
+             sortOrder="99"
+             parent="Razorfish_CronScheduler::title"
+             action="cron_jobs/jobs/index"
+             resource="Razorfish_CronScheduler::jobs"/>
+    </menu>
+</config>

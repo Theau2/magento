@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cron\Console\Command\CronInstallCommand">
+        <plugin name="change" type="Razorfish\CronScheduler\Plugin\CronInstallCommand" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="cron_jobs_listing_data_source" xsi:type="string">Razorfish\CronScheduler\Ui\Component\Listing\Provider</item>
+            </argument>
+        </arguments>
+    </type>
+
+<!--    <type name="Magento\Framework\Crontab\TasksProviderInterface">-->
+<!--        <arguments>-->
+<!--            <argument name="tasks" xsi:type="array">-->
+<!--                <item name="cronMagento" xsi:type="array">-->
+<!--                    <item name="command" xsi:type="string">{magentoRoot}bin/magento cron:run | grep -v "Ran jobs by schedule" >> {magentoLog}magento.cron.log</item>-->
+<!--                    <item name="optional" xsi:type="boolean">false</item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+</config>
