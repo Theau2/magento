@@ -62,7 +62,10 @@ pub/media/captcha/*
 pub/static/*
 !pub/static/.htaccess
 
-app
+app/code/Demo
+app/code/Dev
+app/code/Razorfish/Dummy
+app/code/Razorfish/OneStepCheckout
 
 var/*
 !var/.htaccess
